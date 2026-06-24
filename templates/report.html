@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Student Report Card</h1>
+
+<table border="1">
+
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+<th>Grade</th>
+<th>Points</th>
+</tr>
+
+
+{% for d in data %}
+
+<tr>
+
+<td>{{d[0]}}</td>
+
+<td>{{d[1]}}</td>
+
+
+<td>
+
+{% if d[1] >= 90 %}
+O
+
+{% elif d[1] >= 80 %}
+A+
+
+{% elif d[1] >= 70 %}
+A
+
+{% elif d[1] >= 60 %}
+B+
+
+{% elif d[1] >= 50 %}
+B
+
+{% else %}
+F
+
+{% endif %}
+
+</td>
+
+
+<td>
+
+{% if d[1] >= 90 %}
+10
+
+{% elif d[1] >= 80 %}
+9
+
+{% elif d[1] >= 70 %}
+8
+
+{% elif d[1] >= 60 %}
+7
+
+{% elif d[1] >= 50 %}
+6
+
+{% else %}
+0
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+<h2>
+CGPA: {{average/10}}
+</h2>
+
+
+</body>
+
+</html>

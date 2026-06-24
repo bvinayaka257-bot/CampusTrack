@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Student Report</h1>
+
+
+<form method="POST" action="/report">
+
+
+<select name="student_id">
+
+
+{% for s in students %}
+
+<option value="{{s[0]}}">
+
+{{s[1]}}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+
+
+<br><br>
+
+
+<button>
+Generate Report
+</button>
+
+
+</form>
+
+
+</body>
+
+</html>

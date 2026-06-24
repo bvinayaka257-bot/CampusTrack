@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Top Performer</h1>
+
+{% if topper %}
+
+<h2>{{topper[0]}}</h2>
+<h3>Average Marks: {{topper[1]}}</h3>
+
+{% else %}
+
+<p>No marks added yet.</p>
+
+{% endif %}
+
+<a href="/">
+<button>Dashboard</button>
+</a>
+<br><br>
+
+<a href="/">
+<button>
+Back to Dashboard
+</button>
+</a>
+
+</body>
+</html>
